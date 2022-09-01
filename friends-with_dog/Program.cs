@@ -12,15 +12,17 @@ while (distance > 10)
     {
         time = distance/(firstFriendSpeed + dogSpeed);
         friend = 2;
+        Console.WriteLine($"Бежит к 1 другу. Время: {time}, дистанция: {distance}");
     }
     else
     {
         time = distance/(secondFriendSpeed + dogSpeed);
         friend = 1;
+        Console.WriteLine($"Бежит ко 2 другу. Время: {time}, дистанция: {distance}");
     }
 
     distance = distance - (firstFriendSpeed + secondFriendSpeed) * time;
     count = count + 1;
 }
 
-Console.WriteLine(count);
+Console.WriteLine($"\nСобака навернула {count} кругов\n");
